@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Doggos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./doggos.css">
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+</head>
+<body>
+    <h1>Doggos on Demand</h1>
+    <div class="container" >
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Doggo Breeds</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option disabled value selected="selected">Select One</option>
+            </select>
+        </div>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" id="selectedoggobutton">Show me my doggo!</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" id="doggoinfobutton">Tell me about my doggo!</button> 
+        <button type="button" class="btn btn-secondary btn-lg btn-block" id="randomdoggobutton">Give me a random doggo!</button> 
+    </div>
+    <div class="doggos">
+    </div>
+    <script src="./doggos.js"></script>
+</body>
+</html>

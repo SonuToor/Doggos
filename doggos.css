@@ -1,0 +1,27 @@
+body {
+    font-family:'Spicy Rice', cursive;
+    background-color: blanchedalmond;
+
+}
+h1 {
+    text-align: center;
+    color: rgb(73, 38, 3);
+    text-decoration: antiquewhite;
+}
+
+.btn {
+    background-color: rgb(73, 38, 3);
+}
+.input-group-text {
+    color: rgb(73, 38, 3);
+}
+.input-group-prepend .input-group .mb-3 {
+    background-color: rgb(73, 38, 3);
+}
+
+.doggos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  margin-top: 50px; 
+}
