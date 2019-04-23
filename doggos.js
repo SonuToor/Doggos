@@ -11,12 +11,12 @@ breedSelectButton.addEventListener('click', addNewDoggo);
 randomDoggoButton.addEventListener('click', addRandomDoggo);
 doggoInfoButton.addEventListener('click', displayDoggoInfo);
 
+// create the select menu based on available dogs in the DogAPI
 fetch(dogListGen)
     .then((resp) => resp.json())
     .then(function(data) {
         const breeds = data.message
         for (key in breeds) {
-            let breedOption = key;
             let el = document.createElement("option");
             el.textContent = key;
             el.value = key;
@@ -29,17 +29,20 @@ fetch(dogListGen)
         console.log('Fetch Error :-S', err);
       });
 
-
+// redirect user to the wikipedia article referring to their selected dog
 function displayDoggoInfo() {
     let doggoChosen = selectMenu.value;
+    if (doggoChosen == "") {
+        return
+    }
     window.open(`https://en.wikipedia.org/wiki/${doggoChosen}`)
-    // well above is a much easier way to do it ---- doggoInfoButton.setAttribute("onclick", `location.href='https://en.wikipedia.org/wiki/${selectMenu.value}'`);
 
     // for some breeds this doesn't work, because the breed name is related to something else i.e african, boxer, labrador, pyrenees 
+        // for this there is from my understanding no way to programatically solve it, other than hardcoding the Wiki url for the dogs which require further disambiguation
 }
 
 
-
+// add a picture of the selected dog 
 function addNewDoggo() {
     if (doggos.firstChild){
         doggos.removeChild(doggos.lastChild);
@@ -58,7 +61,7 @@ function addNewDoggo() {
             console.log('Fetch Error :-S', err);
         });
 }
-
+// add a picture of a random dog 
 function addRandomDoggo() {
     if (doggos.firstChild) {
         doggos.removeChild(doggos.lastChild);

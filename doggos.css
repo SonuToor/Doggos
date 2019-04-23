@@ -1,8 +1,14 @@
 body {
     font-family:'Spicy Rice', cursive;
     background-color: blanchedalmond;
-
 }
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
 h1 {
     text-align: center;
     color: rgb(73, 38, 3);
@@ -10,8 +16,10 @@ h1 {
 }
 
 .btn {
+    width: 50%; 
     background-color: rgb(73, 38, 3);
 }
+
 .input-group-text {
     color: rgb(73, 38, 3);
 }
